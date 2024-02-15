@@ -5,8 +5,8 @@ import sys
 """
 This is Home work 2, you are allowed to work in pairs, you can only use chatGPT or other AI model on the course discord public channel.
 
-# Student Name 1:
-# Student Name 2:
+# Student Name 1: Jonah Mulcrone
+# Student Name 2: Brian Sung
 
 # Additional comment for this program, any bugs or creative functions?
 
