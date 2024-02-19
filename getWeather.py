@@ -9,6 +9,7 @@ This is Home work 2, you are allowed to work in pairs, you can only use chatGPT 
 
 # Student Name 1: Jonah Mulcrone
 # Student Name 2: Brian Sung
+# Student Name 3: Emmanuel Obikwelu
 
 # Additional comment for this program, any bugs or creative functions?
 
