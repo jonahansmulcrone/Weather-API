@@ -28,7 +28,11 @@ class saving2Database():
         output would be the path of your sqlite3 database and the data will be saved there
         """
         # set up the mysqlite3 db connection 
-        
+        con = sqlite3.connect('weather.db')
+        cur = con.cursor()
+        keyWord = "Temperature"
+        recordLimit = 10
+
         # initialize the table for the database
         self.initTable()
         
