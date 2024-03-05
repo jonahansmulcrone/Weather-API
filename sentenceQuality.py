@@ -9,6 +9,13 @@ class sentenceQuality():
         # do some initialization, optional
         pass
 
+    def count_letters_and_numbers(input_string):
+        count = 0
+        for char in input_string:
+            if char.isalnum():
+                count += 1
+        return count
+
     def calculateScores(self, tweet):
         # please implement this function
         # input: any tweet text
@@ -21,10 +28,22 @@ class sentenceQuality():
         # https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index
         # You should implement at least one score
 
+        texts = TextBlob(tweet)
+
+        print(texts.sentiment)
+
+        subj = texts.sentiment.subjectivity
+        polar = texts.sentiment.polarity
+
+        charater = float(sentenceQuality.count_letters_and_numbers(tweet))
+        words = float(len(texts.words))
+        num_sentens = len(texts.sentences)
+        print(words)
+        print(charater)
+        automated = float(4.71*(charater/words) + 0.5*(words/num_sentens) - 21.73)
 
 
-
-        return [0.1, 0.2, 0.3, 0.5, 0.6]
+        return [len(tweet)/100, polar, subj, automated]
         pass
 
     def calculateQuality(self, scores):
@@ -32,7 +51,7 @@ class sentenceQuality():
         # Input: a list of scores, which is the output of calculateScores
         # output: 0 means low quality, 1 mean high quality
 
-        return 0.5
+        return sum(scores)/len(scores)
         pass
 
 
