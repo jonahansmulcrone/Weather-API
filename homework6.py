@@ -2,6 +2,9 @@
 
 import re
 
+# Student Name 1: Brian Sung
+# Student Name 2: Emmanuel Obikwelu
+# Student Name 3: Jonah Mulcrone
 
 def countWor(lis):
     word_counts = {}
