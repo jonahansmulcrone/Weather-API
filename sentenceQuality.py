@@ -41,7 +41,9 @@ class sentenceQuality():
         print(words)
         print(charater)
         automated = float(4.71*(charater/words) + 0.5*(words/num_sentens) - 21.73)
-
+        automated = automated/10
+        if automated > 1.0:
+            automated = 1.0
 
         return [len(tweet)/100, polar, subj, automated]
         pass
@@ -51,13 +53,16 @@ class sentenceQuality():
         # Input: a list of scores, which is the output of calculateScores
         # output: 0 means low quality, 1 mean high quality
 
+        if scores[1] == 0.0 or scores[2] == 0.0:
+            return 0
+
         return sum(scores)/len(scores)
         pass
 
 
 # this is for testing only
 obj = sentenceQuality()
-s = "DATA 233 is a wonderful class!"
+s = "Data science is the best way to understand."
 
 print("The scores for your input is " + str(obj.calculateScores(s)))
 
