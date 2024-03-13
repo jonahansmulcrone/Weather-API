@@ -1,8 +1,9 @@
 Weather Element,Current,Forecast,% Change
-City,London,London,N/A
-Time,2024-02-19 21:42:48.213188,2024-02-20 06:00:00,N/A
-Temperature,43,43,0.0
+City,Seattle,Seattle,N/A
+Time,2024-02-19 22:01:24.351717,2024-02-20 06:00:00,N/A
+Description,overcast clouds,clear sky,N/A
+Temperature,42,41,-2.38095
 Humidity,93,93,0.0
-Wind Speed,8,7,-12.5
-Wind Deg,230,227,-1.30435
+Wind Speed,4,2,-50.0
+Wind Deg,170,130,-23.52941
 Visibility,10000,10000,0.0

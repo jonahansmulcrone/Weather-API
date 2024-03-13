@@ -13,7 +13,6 @@ This is Home work 2, you are allowed to work in pairs, you can only use chatGPT 
 
 # Student Name 1: Jonah Mulcrone
 # Student Name 2: Brian Sung
-# Student Name 3: Emmanuel Obikwelu
 
 # Additional comment for this program, any bugs or creative functions?
 
@@ -67,6 +66,7 @@ print(f"The temperature forecast for {forecast_date} is {forecast_temp}F with {f
 current_weather = {
     "City": CITY,
     "Time": current_date,
+    "Description": str(current_desc),
     "Temperature" : int(current_temp),
     "Humidity": int(current_humidity),
     "Wind Speed": int(current_wind_speed),
@@ -77,6 +77,7 @@ current_weather = {
 forecast_weather = {
     "City": CITY,
     "Time": forecast_date,
+    "Description": str(forecast_desc),
     "Temperature": int(forecast_temp),
     "Humidity": int(forecast_humidity),
     "Wind Speed": int(forecast_wind_speed),
@@ -89,6 +90,6 @@ with open(file_path, mode='w', newline='') as file:
     writer.writerow(['Weather Element', 'Current', 'Forecast', '% Change'])
     for element in current_weather.keys():
         if (type(current_weather[element]) == int):
-            writer.writerow([element, current_weather[element], forecast_weather[element], round((forecast_weather[element] - current_weather[element]) / current_weather[element] * 100, 5)])
+            writer.writerow([element, round(current_weather[element], 1), round(forecast_weather[element], 1), round((forecast_weather[element] - current_weather[element]) / current_weather[element] * 100, 5)])
         else:
             writer.writerow([element, current_weather[element], forecast_weather[element], "N/A"])
