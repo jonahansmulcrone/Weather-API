@@ -10,12 +10,13 @@ class TwitterPositive():
     def evaluateTweet(self, tweet):
         # please implement this function
         # input: any tweet text
-        # output: a score [0,1], 0 means it is low quality and negative, 1 means it is high quality and positive
+        # output: a score [0, 1], 0 means it is low quality and negative, 1 means it is high quality and positive
 
+        #remove delimiters from review
         delimiters = "[,;|\\s]+"
-
         words = re.split(delimiters, tweet)
 
+        #create two-gram list
         two_gram = TwitterPositive.twoGram(words)
         print(two_gram)
 
