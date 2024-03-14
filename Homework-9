@@ -3,6 +3,8 @@ import pandas as pd
 from typing import TypeVar, List, Tuple
 from sentenceQuality import sentenceQuality
 
+# Group: Jonah Mulcrone, Brian Sung, Emmanuel C
+
 X = TypeVar('X') # This is a generic type to represent a data point
 
 def split_data(data: List[X], prob: float) -> Tuple[List[X], List[X]]:
