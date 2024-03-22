@@ -201,7 +201,11 @@ dataset = [
     {"sentence": "The performance at the theater received rave reviews from critics.", "quality": 1},
     {"sentence": "The quiet, peaceful atmosphere of the countryside was a welcome change from the city.", "quality": 1},
     {"sentence": "The coffee shop was cozy and inviting, perfect for a relaxing afternoon.", "quality": 1},
-    {"sentence": "The soccer game was intense, with both teams giving it their all until the very end.", "quality": 1}
+    {"sentence": "The soccer game was intense, with both teams giving it their all until the very end.", "quality": 1},
+    {"sentence": "DATA 233 is a wonderful class and I really like it because I have always love computing data.", "quality": 1},
+    {"sentence": "kjf f m fm fn f m fnd fnd fnf n  mf ", "quality": -1},
+    {"sentence": "kdfnng d gkn k gmdgdmgkd", "quality": -1},
+    {"sentence": "jnd mg jg fbn g fng fg fgf gf nmg fmgmfmgmf gmf gmfgm f,mg ,fm gfgf,", "quality": -1},
 ]
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
@@ -228,14 +232,13 @@ class kNNsentenceQuality():
 sentences = [data['sentence'] for data in dataset]
 labels = [data['quality'] for data in dataset]
 
-X_train, X_test, y_train, y_test = train_test_split(sentences, labels, test_size=0.1, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(sentences, labels, test_size=0.1, random_state=100)
 
 # Initialize kNNsentenceQuality object
 obj = kNNsentenceQuality()
 obj.trainkNN(X_train, y_train)
 
-new_sentences = ["The sunrise over the mountains was a breathtaking sight to behold.",
-                 "The movie was not as good as I expected.",
-                 "DATA 233 is a wonderful class and I really like it because I have always love computing data."]
+new_sentences = ["bjvb  jb n "]
 quality = obj.Quality_kNN(new_sentences)
 print("Predicted Quality:", quality)
+print(len(dataset))
